@@ -1,0 +1,42 @@
+/*========== Colors ==========*/
+:root {
+--first-color: hsl(206, 50%, 62%);
+--body-color: hsl(0, 0%, 100%);
+
+--tiny-font-size: 0.6875rem;
+}
+
+.top_header {
+    padding: 15px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart img{
+    width: 20px;
+}
+
+.cart span.count {
+    position: absolute;
+    top: -0.625rem;
+    right: -0.625rem;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    font-size: var(--tiny-font-size);
+    line-height: 18px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
