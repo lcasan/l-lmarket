@@ -1,42 +1,30 @@
-/*========== Colors ==========*/
-:root {
---first-color: hsl(206, 50%, 62%);
---body-color: hsl(0, 0%, 100%);
-
---tiny-font-size: 0.6875rem;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+ 
+.navbar {
+  background-color: #5d4037;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.top_header {
-    padding: 15px;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.banner {
+  background-color: #ef6c00;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin-top: 50px; 
 }
 
-.cart {
-    position: relative;
-}
-
-.cart img{
-    width: 20px;
-}
-
-.cart span.count {
-    position: absolute;
-    top: -0.625rem;
-    right: -0.625rem;
-    background-color: var(--first-color);
-    color: var(--body-color);
-    height: 18px;
-    width: 18px;
-    text-align: center;
-    font-size: var(--tiny-font-size);
-    line-height: 18px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+.categories {
+  background-color: #ffccbc;
+  color: black;
+  padding: 20px;
+  text-align: center;
 }
