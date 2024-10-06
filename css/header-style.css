@@ -1,0 +1,22 @@
+.cart span.count {
+    position: absolute; 
+    top: -0.350rem;
+    right: -0.800rem;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    font-size: var(--tiny-font-size);
+    line-height: 18px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.cart {
+    width: 15px;
+    position: relative;
+}
