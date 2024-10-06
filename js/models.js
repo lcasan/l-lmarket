@@ -12,7 +12,7 @@ export class Product {
         productHTML.className = 'product';
 
         productHTML.innerHTML = `
-            <img src="../assets/img/products/P${this.code}.png" alt="Product image" class="product__img">
+            <img src="assets/img/products/P${this.code}.png" alt="Product image" class="product__img">
             <a 
                 href="#" 
                 class="action__btn cart__btn" 
