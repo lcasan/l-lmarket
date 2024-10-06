@@ -24,12 +24,19 @@
 *{
     font-family: 'Inter';
 }
+
+.products__container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min-content;
+}
+
 /* ===== Product ===== */
 .product{
     position: relative;
     width: 250px;
     height: 320px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 0 5px 10px 0px gray;
     display: flex;
