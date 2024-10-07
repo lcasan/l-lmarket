@@ -1,5 +1,5 @@
 import { Product } from "./models.js";
-import stock from "../data/stock.json" assert {type: 'json'}
+import stock from "../data/stock.json" with {type: 'json'}
 
 const app = document.querySelector('.products__container');
 
