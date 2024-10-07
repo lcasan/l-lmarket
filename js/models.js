@@ -1,10 +1,11 @@
 export class Product {
-    constructor({code, name, color, size, price}) {
+    constructor({code, name, color, size, price, amount = 0}) {
         this.code = code; // gtin-8
         this.name = name;
         this.color = color;        
         this.price = price;
         this.size = size;
+        this.amout = amount;
     }
 
     render(){
@@ -16,7 +17,8 @@ export class Product {
             <a 
                 href="#" 
                 class="action__btn cart__btn" 
-                aria-label="Añadir al carrito" >
+                aria-label="Añadir al carrito" 
+                >
                 <img src="assets/add-shopping-cart.svg" class="cart__img">
             </a>
             <div class="product__content">
@@ -24,6 +26,13 @@ export class Product {
                 <span class="product__price">$${this.price}</span>
             </div>
         `;
+        
+        productHTML.addEventListener('click', (event) => {
+            event.preventDefault();
+            this.amout += 1;
+            const cartBtn = productHTML.querySelector('.cart__btn');
+            cartBtn.setAttribute('aria-label', `+${this.amout}`);
+        });
         return productHTML;
     }
 }

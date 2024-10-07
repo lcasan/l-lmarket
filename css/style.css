@@ -1,5 +1,30 @@
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsla(0, 14%, 93%, 0.644);
+  --first-color-alt: hsla(0, 14%, 93%, 0.644);
+  --body-color: hsl(0, 0%, 100%);
+  --border-color: hsl(0, 0%, 100%);
+
+  /*========== Font ==========*/
+  --tiny-font-size: 0.6875rem;
+  --small-font-size: 13px;
+  --text-color: hsl(0, 2%, 23%);
+
+  /*========== Transition ==========*/
+  --transition: cubic-bezier(0, 0, 0.05, 1);
+} 
+
+@font-face
+{
+  font-family: 'Inter';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../assets/font/Inter.ttf');
+}
+
 body {
   margin: 0;
+  background-color: var(--first-color);
 }
 
 .top_header{
@@ -15,9 +40,8 @@ body {
 
 .banner{
   width: 100%;
-  height: auto;
+  height:80px;
   max-width: 100%;
-  background-image: url("../assets/img/banners/banner-1.png");
 }
 
 .product__section{
@@ -29,6 +53,12 @@ body {
 }
 
 /*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 1400px) {
+  .products__container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .products__container{
     grid-template-columns: repeat(3, 1fr);
