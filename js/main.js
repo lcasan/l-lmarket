@@ -1,21 +1,16 @@
-import { Product } from "./models.js";
-import stock from "../data/stock.json" with {type: 'json'}
+import { addProductsToHTML } from "./utils.js";
+import JSON from "../data/stock.json" with {type: 'json'}
+let cart = [];
 
-const app = document.querySelector('.products__container');
+const initApp = () => {
+    // Add products:
+    addProductsToHTML(JSON, 'pullovers');
 
-if (app) {
-    stock['pullovers'].map(item => {
-        const product = new Product({
-            code: item['code'],
-            name: item['name'],
-            color: item['color'],
-            size: item['size'],
-            price: item['price']
-        });
-
-        const productElement = product.render();
-        app.appendChild(productElement);
-    });
-} else {
-    console.error("El contenedor '.products__container' no existe en el DOM.");
+    // Get data cart from memory
+    if(localStorage.getItem('cart')){
+        cart = JSON.parse(localStorage.getItem('cart'));
+        addCartToHTML();
+    }
 }
+
+initApp()
