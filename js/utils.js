@@ -10,7 +10,8 @@ export const addProductsToHTML = (JSON, productType, table) => {
                 name: item['name'],
                 color: item['color'],
                 size: item['size'],
-                price: item['price']
+                price: item['price'],
+                amount: item['amount'],
             });
 
             const productElement = product.render(table);

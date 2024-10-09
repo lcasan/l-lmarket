@@ -22,7 +22,6 @@ fetch('../data/stock.json')
                 cart.forEach(product => {
                     table.addToCart(product);
                 });
-                
                 addCartToHTML(table);
             } catch (error) {
                 console.error('Error parsing cart from localStorage:', error);

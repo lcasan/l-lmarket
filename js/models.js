@@ -1,5 +1,5 @@
 export class Product {
-    constructor({ code, name, color, size, price, amount = 0 }) {
+    constructor({ code, name, color, size, price, amount=0}) {
         this.code = code;
         this.name = name;
         this.color = color;
@@ -12,9 +12,11 @@ export class Product {
         const productHTML = document.createElement('div');
         productHTML.className = 'product';
 
+        let ariaLabel = "Add to cart";
+        this.amount == 0? ariaLabel = "Add to cart" : ariaLabel = "+" + this.amount.toString();
         productHTML.innerHTML = `
             <img src="assets/img/products/P${this.code}.png" alt="Imagen de producto" class="product__img">
-            <a href="#" class="action__btn cart__btn" aria-label="Add to cart">
+            <a href="#" class="action__btn cart__btn" aria-label="${ariaLabel}">
                 <img src="assets/add-shopping-cart.svg" class="cart__img">
             </a>
             <div class="product__content">
@@ -33,6 +35,8 @@ export class Product {
                 size: this.size,
                 price: this.price
             });
+            this.amount += 1;
+            cartBtn.setAttribute('aria-label', `+${this.amount}`);
         });
 
         return productHTML;
@@ -42,6 +46,7 @@ export class Product {
 export class Cart {
     constructor() {
         this.products = [];
+        this.amount = 0;
         this.content = document.createElement('div');
         this.content.className = 'table__container';
     }
