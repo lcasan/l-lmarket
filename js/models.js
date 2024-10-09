@@ -1,5 +1,5 @@
-export class Product {
-    constructor({ code, name, color, size, price, amount=0}) {
+export class Product {  
+    constructor({ code, name, color, size, price, amount}) {
         this.code = code;
         this.name = name;
         this.color = color;
@@ -12,8 +12,16 @@ export class Product {
         const productHTML = document.createElement('div');
         productHTML.className = 'product';
 
-        let ariaLabel = "Add to cart";
-        this.amount == 0? ariaLabel = "Add to cart" : ariaLabel = "+" + this.amount.toString();
+        // product in cart 
+        let ariaLabel;
+        let productinCart = table.products.find(product => product.code === this.code);
+        
+        if(productinCart){
+            ariaLabel = productinCart.amount;
+        }else{
+            ariaLabel = "Añadir producto"
+        }
+        
         productHTML.innerHTML = `
             <img src="assets/img/products/P${this.code}.png" alt="Imagen de producto" class="product__img">
             <a href="#" class="action__btn cart__btn" aria-label="${ariaLabel}">
@@ -28,15 +36,18 @@ export class Product {
         const cartBtn = productHTML.querySelector('.cart__btn');
         cartBtn.addEventListener('click', (event) => {
             event.preventDefault();
-            table.addToCart({
-                code: this.code,
-                name: this.name,
-                color: this.color,
-                size: this.size,
-                price: this.price
-            });
-            this.amount += 1;
-            cartBtn.setAttribute('aria-label', `+${this.amount}`);
+            if(this.amount > 0){
+                table.addToCart({
+                    code: this.code,
+                    name: this.name,
+                    color: this.color,
+                    size: this.size,
+                    price: this.price
+                });
+                this.amount -= 1;
+                let productinCart = table.products.find(product => product.code === this.code);
+                cartBtn.setAttribute('aria-label', `+${productinCart.amount}`);
+            }
         });
 
         return productHTML;
@@ -61,8 +72,8 @@ export class Cart {
                     <h3 class="table__title">${product.name} (${product.color}, ${product.size})</h3>
                 </td>
                 <td><span class="table__price">$${product.price}</span></td>
-                <td><input type="number" value="${product.quantity}" class="quantity" data-code="${product.code}" /></td>
-                <td><span class="subtotal">$${product.price * product.quantity}</span></td>
+                <td><input type="number" value="${product.amount}" class="quantity" data-code="${product.code}" /></td>
+                <td><span class="subtotal">$${product.price * product.amount}</span></td>
                 <td><i class="fi fi-rs-trash table__trash" data-code="${product.code}"></i></td>
             </tr>
         `).join('');
@@ -101,9 +112,9 @@ export class Cart {
         const existingProduct = this.products.find(product => product.code === code);
 
         if (existingProduct) {
-            existingProduct.quantity += 1;
+            existingProduct.amount += 1;
         } else {
-            this.products.push({ code, name, color, size, price, quantity: 1 });
+            this.products.push({ code, name, color, size, price, amount: 1 });
         }
 
         this.saveToLocalStorage();

@@ -1,18 +1,18 @@
 {
     "pullovers": [
-      {"code": 1, "name": "Boss Hugo Boss", "color": "Amarillo","size":"Talla única", "price": 1800},
-      {"code": 2, "name": "Gucci Gang", "color": "Rojo","size":"Talla única", "price": 1800},
-      {"code": 3, "name": "Hugo Boss", "color": "Azul","size":"Talla única", "price": 1800},
-      {"code": 4, "name": "Boss Hugo Boss", "color": "Negro","size":"Talla única", "price": 1800},
-      {"code": 5, "name": "Versace", "color": "Gris","size":"Talla única", "price": 1800},
-      {"code": 6, "name": "Versace", "color": "Negro","size":"Talla única", "price": 1800},
-      {"code": 7, "name": "Versace", "color": "Azul","size":"Talla única", "price": 1800},
-      {"code": 8, "name": "Nike", "color": "Negro","size":"Talla única", "price": 1800},
-      {"code": 9, "name": "Gucci", "color": "Negro","size":"Talla única", "price": 1800},
-      {"code": 10,"name":  "Gucci", "color": "Blanco","size":"Talla única", "price": 1800},
-      {"code": 11,"name":  "Gucci", "color": "Rosado","size":"Talla única", "price": 1800},
-      {"code": 12,"name":  "Nike", "color": "Gris","size":"Talla única", "price": 1800},
-      {"code": 13,"name":  "Boss Hugo Boss", "color": "Gris","size":"Talla única", "price": 1800},
-      {"code": 14,"name":  "Hugo Boss", "color": "Gris","size":"Talla única", "price": 1800}
+      {"code": 1, "name": "Boss Hugo Boss", "color": "Amarillo","size":"Talla única", "price": 1800, "amount": 6},
+      {"code": 2, "name": "Gucci Gang", "color": "Rojo","size":"Talla única", "price": 1800, "amount": 2},
+      {"code": 3, "name": "Hugo Boss", "color": "Azul","size":"Talla única", "price": 1800, "amount": 1},
+      {"code": 4, "name": "Boss Hugo Boss", "color": "Negro","size":"Talla única", "price": 1800, "amount": 3},
+      {"code": 5, "name": "Versace", "color": "Gris","size":"Talla única", "price": 1800, "amount": 1},
+      {"code": 6, "name": "Versace", "color": "Negro","size":"Talla única", "price": 1800, "amount": 2},
+      {"code": 7, "name": "Versace", "color": "Azul","size":"Talla única", "price": 1800, "amount": 1},
+      {"code": 8, "name": "Nike", "color": "Negro","size":"Talla única", "price": 1800, "amount": 5},
+      {"code": 9, "name": "Gucci", "color": "Negro","size":"Talla única", "price": 1800, "amount": 2},
+      {"code": 10,"name":  "Gucci", "color": "Blanco","size":"Talla única", "price": 1800, "amount": 3},
+      {"code": 11,"name":  "Gucci", "color": "Rosado","size":"Talla única", "price": 1800, "amount": 4},
+      {"code": 12,"name":  "Nike", "color": "Gris","size":"Talla única", "price": 1800, "amount": 1},
+      {"code": 13,"name":  "Boss Hugo Boss", "color": "Gris","size":"Talla única", "price": 1800, "amount": 2},
+      {"code": 14,"name":  "Hugo Boss", "color": "Gris","size":"Talla única", "price": 1800, "amount": 4}
     ]
 }
