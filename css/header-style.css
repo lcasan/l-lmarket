@@ -1,8 +1,11 @@
 .cart span.count {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
     position: absolute; 
     top: -0.350rem;
     right: -0.800rem;
-    background-color: var(--first-color);
+    background-color: burlywood;
     color: var(--body-color);
     height: 15px;
     width: 15px;
@@ -16,6 +19,11 @@
     -o-border-radius: 50%;
 }
 
+.cart span.count p {
+    color: black; 
+    margin: 0; 
+    padding: 0;
+}
 .cart {
     width: 15px;
     position: relative;

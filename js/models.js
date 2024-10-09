@@ -109,6 +109,9 @@ export class Cart {
     }
 
     addToCart({ code, name, color, size, price }) {
+        // Increment +1 cart amount 
+        this.amount += 1;
+
         const idx = this.products.findIndex(product => product.code === code);
 
         if (idx >= 0) {
@@ -121,6 +124,12 @@ export class Cart {
         this.render();
     }
 
+    updateTopCart(){
+        // Cart: Top header:
+        console.log(this.amount);
+        const countHTML = document.querySelector('.cart .count');
+        countHTML.textContent = this.amount;
+    }
     saveToLocalStorage() {
         console.log(`In Local storage ${this.products}`);
         this.products.forEach(
@@ -128,17 +137,15 @@ export class Cart {
                 console.log(element);
             }
         )
-        localStorage.setItem('cart', JSON.stringify(this.products));
+        localStorage.setItem('amount', JSON.stringify(this.amount));
+        localStorage.setItem('cart', this.products);
     }
 
     loadFromLocalStorage() {
         const storedCart = localStorage.getItem('cart');
-        if (storedCart) {
-            try {
-                this.products = JSON.parse(storedCart);
-            } catch (error) {
-                console.error('Error parsing cart from localStorage:', error);
-            }
-        }
+        const storedAmount = localStorage.getItem('amount');
+
+        this.amount = storedAmount? storedAmount : 0;
+        if(storedCart){ this.products = JSON.parse(storedCart)}; 
     }
 }

@@ -24,4 +24,5 @@ export const addCartToHTML = (table) => {
     const cartContainer = document.querySelector('.cart.section--lg.container');
     const tableElement = table.render();
     cartContainer.appendChild(tableElement);
+    table.updateTopCart();
 };

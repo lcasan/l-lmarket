@@ -10,18 +10,13 @@ fetch('../data/stock.json')
     .then(response => response.json())
     .then(data => {
         products = data;
-
         // Initialize cart from localStorage
-        if (localStorage.getItem('cart')) {
-            try {
-                table.loadFromLocalStorage()
-                addCartToHTML(table);
-                
-                // Add products to HTML
-                addProductsToHTML(products, 'pullovers', table);
-            } catch (error) {
-                console.error('Error parsing cart from localStorage:', error);
-            }
-        }
+        table.loadFromLocalStorage();
+    
+        // Add cart to HTML
+        addCartToHTML(table);
+
+        // Add products to HTML
+        addProductsToHTML(products, 'pullovers', table);
     })
     .catch(error => console.error('Error loading JSON file:', error));
