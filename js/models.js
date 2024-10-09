@@ -109,10 +109,10 @@ export class Cart {
     }
 
     addToCart({ code, name, color, size, price }) {
-        const existingProduct = this.products.find(product => product.code === code);
+        const idx = this.products.findIndex(product => product.code === code);
 
-        if (existingProduct) {
-            existingProduct.amount += 1;
+        if (idx >= 0) {
+            this.products[idx].amount += 1;
         } else {
             this.products.push({ code, name, color, size, price, amount: 1 });
         }
@@ -122,6 +122,12 @@ export class Cart {
     }
 
     saveToLocalStorage() {
+        console.log(`In Local storage ${this.products}`);
+        this.products.forEach(
+            element => {
+                console.log(element);
+            }
+        )
         localStorage.setItem('cart', JSON.stringify(this.products));
     }
 

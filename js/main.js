@@ -11,18 +11,14 @@ fetch('../data/stock.json')
     .then(data => {
         products = data;
 
-        // Add products to HTML
-        addProductsToHTML(products, 'pullovers', table);
-
         // Initialize cart from localStorage
         if (localStorage.getItem('cart')) {
             try {
-                cart = JSON.parse(localStorage.getItem('cart'));
-                
-                cart.forEach(product => {
-                    table.addToCart(product);
-                });
+                table.loadFromLocalStorage()
                 addCartToHTML(table);
+                
+                // Add products to HTML
+                addProductsToHTML(products, 'pullovers', table);
             } catch (error) {
                 console.error('Error parsing cart from localStorage:', error);
             }
