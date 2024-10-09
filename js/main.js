@@ -1,16 +1,32 @@
-import { addProductsToHTML } from "./utils.js";
-import JSON from "../data/stock.json" with {type: 'json'}
+import { addProductsToHTML, addCartToHTML } from "./utils.js";
+import { Cart } from "./models.js";
+
+let products = {};
 let cart = [];
+let table = new Cart();
 
-const initApp = () => {
-    // Add products:
-    addProductsToHTML(JSON, 'pullovers');
+// Fetch data from JSON and initialize the app
+fetch('../data/stock.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
 
-    // Get data cart from memory
-    if(localStorage.getItem('cart')){
-        cart = JSON.parse(localStorage.getItem('cart'));
-        addCartToHTML();
-    }
-}
+        // Add products to HTML
+        addProductsToHTML(products, 'pullovers', table);
 
-initApp()
+        // Initialize cart from localStorage
+        if (localStorage.getItem('cart')) {
+            try {
+                cart = JSON.parse(localStorage.getItem('cart'));
+                
+                cart.forEach(product => {
+                    table.addToCart(product);
+                });
+                
+                addCartToHTML(table);
+            } catch (error) {
+                console.error('Error parsing cart from localStorage:', error);
+            }
+        }
+    })
+    .catch(error => console.error('Error loading JSON file:', error));

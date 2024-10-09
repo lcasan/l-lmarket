@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        <title>L&L Market</title>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/header-style.css"/>
-        <link rel="stylesheet" href="css/product-style.css"/>
-    </head>
-    <body>
-        <header>
-            <div class="top_header">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="Website logo" style="width: 100px;">
-                </a>
-                <a href="cart.html" class="cart">
-                    <img src="assets/shopping-cart.svg" alt="Cart logo">
-                    <span class="count">3</span>
-                </a>
-            </div>
-        </header>
-        <div role="banner" class="banner"></div>
-        <main>
-            <!-- Products -->
-            <section class="product__section">
-                <!-- Categories -->
-                <section>
-                    
-                </section>
-                <div class="products__container"></div>    
-            </section>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="L&L Market - Tu tienda en línea para todo tipo de productos." />
+    <meta name="keywords" content="ecommerce, tienda online, productos, L&L Market" />
+    <meta name="author" content="Luis y Laritza" />
 
-            <div class="cartTab">
-                <h1>Shopping Cart</h1>
-                <div class="listCart">
-                    
-                </div>
-                <div class="btn">
-                    <button class="close">CLOSE</button>
-                    <button class="checkOut">Check Out</button>
-                </div>
-            </div>
-        </main>
-        
-        <!--  JS CODE  -->
-        <script type="module" src="js/main.js"></script>
-    </body>
+    <title>L&L Market</title>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/cart-style.css"/>
+    <link rel="stylesheet" href="css/header-style.css"/>
+    <link rel="stylesheet" href="css/product-style.css"/>
+</head>
+<body>
+    <header>
+        <div class="top_header">
+            <a href="index.html" aria-label="Back to home">
+                <img src="assets/logo.png" alt="Logo de L&L Market" style="width: 100px;">
+            </a>
+            <a href="cart.html" class="cart" aria-label="Show cart">
+                <img src="assets/shopping-cart.svg" alt="Ícono de carrito">
+                <span class="count">3</span>
+            </a>
+        </div>
+    </header>
+
+    <div role="banner" class="banner"></div>
+
+    <main>
+        <!-- Products -->
+        <section class="product__section">
+            <!-- Categories -->
+            <section></section>
+
+            <div class="products__container"></div>    
+        </section>
+    </main>
+
+    <!-- Cart -->
+    <section class="cart section--lg container"></section>
+
+    <!--  JS CODE  -->
+    <script type="module" src="js/main.js"></script>
+</body>
 </html>
