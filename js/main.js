@@ -5,7 +5,7 @@ let products = {};
 let table = new Cart();
 
 // Fetch data from JSON: Init the app
-fetch('../data/stock.json')
+fetch('data/stock.json')
     .then(response => response.json())
     .then(data => {
         // Stock's products
