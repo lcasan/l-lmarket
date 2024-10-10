@@ -121,31 +121,34 @@ export class Cart {
         }
 
         this.saveToLocalStorage();
+        this.updateTopCart();
         this.render();
     }
 
     updateTopCart(){
         // Cart: Top header:
         console.log(this.amount);
+        console.log(typeof(this.amount));
         const countHTML = document.querySelector('.cart .count');
         countHTML.textContent = this.amount;
     }
+
     saveToLocalStorage() {
-        console.log(`In Local storage ${this.products}`);
         this.products.forEach(
             element => {
                 console.log(element);
             }
         )
-        localStorage.setItem('amount', JSON.stringify(this.amount));
-        localStorage.setItem('cart', this.products);
+        localStorage.setItem('amount', this.amount);
+        localStorage.setItem('cart', JSON.stringify(this.products));
     }
 
     loadFromLocalStorage() {
-        const storedCart = localStorage.getItem('cart');
         const storedAmount = localStorage.getItem('amount');
+        const storedCart = localStorage.getItem('cart');
 
-        this.amount = storedAmount? storedAmount : 0;
-        if(storedCart){ this.products = JSON.parse(storedCart)}; 
+        this.amount = storedAmount? parseInt(storedAmount) : 0;
+        console.log(storedCart);
+        if(this.amount > 0){ this.products = JSON.parse(storedCart)}; 
     }
 }

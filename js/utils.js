@@ -21,8 +21,11 @@ export const addProductsToHTML = (JSON, productType, table) => {
 };
 
 export const addCartToHTML = (table) => {
+    // Cart
     const cartContainer = document.querySelector('.cart.section--lg.container');
     const tableElement = table.render();
     cartContainer.appendChild(tableElement);
+    
+    // Top cart
     table.updateTopCart();
 };
