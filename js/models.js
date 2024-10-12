@@ -25,7 +25,7 @@ export class Product {
         productHTML.innerHTML = `
             <img src="assets/img/products/P${this.code}.png" alt="Imagen de producto" class="product__img">
             <a href="#" class="action__btn cart__btn" aria-label="${ariaLabel}">
-                <img src="assets/add-shopping-cart.svg" class="cart__img">
+                <img src="assets/icon/add-shopping-cart.svg" class="cart__img">
             </a>
             <div class="product__content">
                 <span>${this.name}</span>

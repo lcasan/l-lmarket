@@ -11,19 +11,21 @@
 
     <!-- CSS Stylesheets -->
      <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/product-style.css">
 </head>
 <body>
     <header>
       <a class="logo">L&L.Market</a>
       <nav>
-        <a>Cat 1</a>
-        <a>Cat 2</a>
-        <a>Cat 3</a>
+        <a>Hombre</a>
+        <a>Mujer</a>
+        <a>Novedades</a>
       </nav>
       <input type="text" placeholder="Buscar productos ...">
       <div>
-        <a>
-          <img src="assets/icon/cart.svg" alt="Cart Icon">
+        <a class="cart">
+          <img src="assets/icon/shopping-cart.svg" alt="Cart Icon">
+          <span class="count">0</span>
         </a>
         <a>
           <img src="assets/icon/user.svg" alt="User Icon">
@@ -36,7 +38,15 @@
         <img src="assets/img/banners/banner.png" />
       </div>
     </div>
+
     <main>
+        <!-- Products -->
+        <section class="product__section">
+          <h1 style="text-align: center;">PRODUCTOS</h1>
+          <div class="products__container"></div>
+      </section>
     </main>
+    <!--  JS CODE  -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

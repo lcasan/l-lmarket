@@ -14,8 +14,8 @@ fetch('data/stock.json')
         // Initialize cart from localStorage
         table.loadFromLocalStorage();
     
-        // Add cart to HTML
-        addCartToHTML(table);
+        // Update cart to HTML
+        table.updateTopCart();
 
         // Add products to HTML
         addProductsToHTML(products, 'pullovers', table);
