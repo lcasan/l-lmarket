@@ -134,12 +134,17 @@ main {
   .products__container{
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .product {
+    margin: 2px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   header {
     margin: 0px 50px;
   }
+
 
   h1 {
     font-size: 20px;

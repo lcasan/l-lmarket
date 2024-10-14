@@ -12,7 +12,7 @@
     position: relative;
     width: 200px;
     height: 280px;
-    margin: 20px;
+    margin: 5px;
     border-radius: 10px;
     box-shadow: 0 5px 10px 0px hsla(0, 0%, 61%, 0.685);
     display: flex;
