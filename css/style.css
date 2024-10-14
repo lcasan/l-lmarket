@@ -30,14 +30,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 200px 0px 200px;
+  margin: 0px 100px 0px 100px;
   padding: 10px 20px 10px 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 header nav a {
-  text-align: center;
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 5px;
+  font-size: 13px;
   font-family: "Inter";
   color: var(--first-color);
 }
@@ -62,7 +65,7 @@ header input {
 
 /* Banner */
 .banner img{
-  width: 100%;
+  width: 100vw;
   height: auto;
   background: #F0EEED; 
   overflow: hidden;
@@ -77,30 +80,40 @@ main {
 }
 
 /* Cart-style */
-.cart span.count {
-  position: relative;
-  left: -15px;
-  top: -20px;
-  font-size: 13px;
-  background-color: var(--thrid-color);
+.count {
+  background-color: var(--second-color);
   color: var(--fifth-color);
+  font-size: 12px;
+  border-radius: 50%;
   padding: 2px;
-  font-family: "Roboto";
+  position: absolute;
   text-align: center;
+  top: -16px;
+  right: -5px;
+  width: 15px; 
+  height: 15px;
+}
+
+.cart img {
+  width: 24px;
 }
 
 .cart {
   width: 15px;
-  border-radius: 50%;
   position: relative;
+  margin: 0px 10px;
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 950px) {
   .banner img{
     height: 400px;
   }
 
   header input {
+    display: none;
+  }
+
+  header nav a {
     display: none;
   }
 }
