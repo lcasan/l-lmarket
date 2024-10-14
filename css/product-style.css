@@ -10,8 +10,8 @@
 /* ===== Product ===== */
 .product{
     position: relative;
-    width: 250px;
-    height: 320px;
+    width: 200px;
+    height: 280px;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 10px 0px hsla(0, 0%, 61%, 0.685);
@@ -30,10 +30,12 @@
 .product__content{
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .product__price{
+  margin: 2px;
   color: hsl(27, 92%, 41%);
   font-size: var(--small-font-size);
 }
