@@ -67,6 +67,7 @@ header input {
 .banner img{
   width: 100vw;
   height: auto;
+  scale: 16/9;
   background: #F0EEED; 
   overflow: hidden;
 }
@@ -105,9 +106,6 @@ main {
 }
 
 @media screen and (max-width: 950px) {
-  .banner img{
-    height: 400px;
-  }
 
   header input {
     display: none;
@@ -141,5 +139,12 @@ main {
 @media screen and (max-width: 768px) {
   .products__container{
     grid-template-columns: 100%;
+  }
+
+  header {
+    margin: 0px 50px;
+  }
+  h1 {
+    font-size: 20px;
   }
 }
