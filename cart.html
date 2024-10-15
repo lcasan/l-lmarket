@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="L&L Market - Tu tienda en línea para todo tipo de productos." />
+    <meta name="keywords" content="ecommerce, tienda online, productos, L&L Market" />
+    <meta name="author" content="Luis y Laritza" />
+
+    <title>Carrito</title>
+
+    <!-- CSS Stylesheets -->
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/cart/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html" class="logo">L&L.Market</a>
+      <nav>
+        <a>Hombre</a>
+        <a>Mujer</a>
+        <a>Novedades</a>
+      </nav>
+    </div>
+    <div>
+    <input type="text" placeholder="Buscar productos ...">
+      <a href="cart.html" class="cart">
+        <img src="assets/icon/shopping-cart.svg" alt="Cart Icon">
+        <span class="count">0</span>
+      </a>
+      <a>
+        <img src="assets/icon/account.svg" alt="User Icon">
+      </a>
+    </div>
+  </header>
+  <main>
+    <section class="cart_section">
+      <h1>TU CARRITO</h1>
+      <div class="mycart">
+        <!-- Product List -->
+        <div style="width: 60%;" class="products">
+          <!-- Product -->
+          <div>
+            <!-- Image -->
+            <img style="height: 100px; width: 10  0px; border-radius: 10px;" src="assets/img/products/P1.png" alt="">
+            <!-- Content -->
+            <div style="display: flex; justify-content: space-between; flex-grow: 1;">
+              <!-- Section 1-->
+              <div style="display: flex; justify-content: space-around; flex-direction: column;">
+                <h4 style="margin: 0px;">Nombre del pullover</h4>
+                <p class="price">$100</p>
+              </div>
+              <!-- Section 2 -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; align-items: center;">
+                <button style="background-color:transparent; border-color: transparent; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center;"><img src="assets/icon/trash.svg"></button>
+                <div style="display: flex; justify-content: center; align-items: center; background-color: var(--fifth-color); height: 10px; width: 40px;">
+                  <a style="background-color: transparent; border: transparent; width: auto; height: auto;  "> - </a>
+                  <label style="font-size: 10px;">1</label>
+                  <a style="background-color: transparent; border: transparent; width: auto; height: auto;"> + </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Order Sumary -->
+        <div style="width: 30%;" class="order_summary">
+          <h1> Resumen de la orden </h1>
+          <div>
+            <p class="name"> Subtotal</p>
+            <p class="price">$100</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+    <!--  JS CODE  -->
+    <script type="module" src="js/cart/main.js"></script>
+</body>
+</html>

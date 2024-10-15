@@ -22,9 +22,11 @@ body {
   margin: 0px;
 }
 
-h1 {
+.product__section h1 {
   font-family: "Roboto";
+  text-align: center;
 }
+
 /* Nav Style */
 header {
   display: flex;
@@ -36,6 +38,12 @@ header {
 
 a {
   text-decoration: none;
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header nav a {
@@ -61,6 +69,7 @@ header input {
   font-family: "Roboto";
   font-size: 24px;
   color: var(--first-color);
+  margin-right: 10px;
 }
 
 /* Banner */
@@ -89,8 +98,8 @@ main {
   padding: 2px;
   position: absolute;
   text-align: center;
-  top: -16px;
-  right: -5px;
+  top: -10px;
+  right: -15px;
   width: 15px; 
   height: 15px;
 }
@@ -102,7 +111,7 @@ main {
 .cart {
   width: 15px;
   position: relative;
-  margin: 0px 10px;
+  margin: 0px 20px;
 }
 
 @media screen and (max-width: 950px) {
